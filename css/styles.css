@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #fffffd; /* Ivory text color */
+    background-color: #333333; /* Charcoal grey background color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Home Section */
+.home {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333; /* Charcoal grey */
+    padding: 20px;
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.intro-text {
+    max-width: 60%;
+    text-align: left;
+    color: #f7f7f4;
+}
+
+.large-text {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Dancing Script'; /* Handwriting font */
+    color: #C0C0C0; 
+    background: linear-gradient(to right, #C0C0C0, #dc81a4);
+    background-clip: text;
+    -webkit-background-clip: text; /* Proper use of webkit prefix */
+    color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Silver shiny text shadow */
+    transition: all 0.5s ease;
+}
+.large-text:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    
+}
+
+.subtitle-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 10px 0;
+    font-family:'Dancing Script',cursive;
+    color: #DAB6C4; /* Blush pink color for subtitle */
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fafafa;
+}
+
+/* Profile Photo Styling */
+    /* Profile Photo Styling */
+    .profile-photo {
+        max-width: 300px;
+        border-radius: 50%;
+        margin-right: 20px;
+        animation: slideIn 2s ease-in-out;
+        box-shadow: 0 0 10px rgba(218, 182, 196, 0.7); /* Blush pink shine */
+    }
+.highlight {
+    color: #f782c2; /* Blush pink highlight color */
+}
+
+/* Skills Section */
+.section-heading, .skills h2, .education h3, .work-experience h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #DAB6C4;
+}
+.skills {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #333333; /* Charcoal grey */
+    padding: 20px;
+}
+
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills-item {
+    text-align: center;
+    margin: 10px;
+    color: #f9f9f9;
+}
+
+.skill-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom:10px;
+}
+
+.animate-logo
+{
+    animation: logo-pulse 2s infinite; 
+}
+@keyframes logo-pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.1);
+        filter: brightness(1.5);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+.education,
+.work-experience {
+    margin-top: 20px;
+}
+
+.education ul,
+.work-experience ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.education li,
+.work-experience li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #333333; /* Charcoal grey */
+    padding: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    color: #f4f4f4;
+    transition: box-shadow 0.5s ease-in-out;
+    position: relative; /* Needed for pseudo-element positioning */
+    overflow: hidden; /* Hide overflow for the shine effect */
+}
+
+.project-description h3 {
+    color: #cecef2; /* Fog color for project titles */
+}
+.project-card:hover {
+   
+    animation: shine 1s ease-in-out; /* Apply the shine animation */
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(218, 182, 196, 0.5); /* Initial shadow */
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(218, 182, 196, 0.8); /* Bright shine */
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(218, 182, 196, 0.9); /* Final shadow */
+    }
+}
+.project-video{
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(218, 182, 196, 0.7);
+}
+
+/* Contact Section */
+.contact {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #333333; /* Charcoal grey */
+    padding: 20px;
+}
+
+.contact-info {
+    text-align: left;
+    color: #f5f2e5;
+}
+
+.contact-info a {
+    color: #d2e2f3; /* Blush pink color for links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Shine effect */
+.shine {
+    box-shadow: 0 0 10px #dc81a4; /* Blush pink shiny effect */
+}
+
+@keyframes shineEffect {
+    from {
+        box-shadow: 0 0 10px #dc81a4; /* Copper color for glow */
+    }
+    to {
+        box-shadow: 0 0 20px #dc81a4, 0 0 30px #dc81a4, 0 0 40px #dc81a4;
+    }
+}
